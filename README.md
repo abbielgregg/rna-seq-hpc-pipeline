@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # Reproducibility Assessment of RNA-seq Quantification Pipelines
 
 An end-to-end bioinformatics and statistical framework evaluating the impact of quantification strategies on differential gene expression profiling. 
@@ -74,6 +73,5 @@ rna-seq-hpc-pipeline/
 * High-Performance Computing: Deployed and run via an Imperial College Cluster HPC environment.
 * Upstream Linux Shell Tools: hisat2/2.2.1, samtools/1.6, kallisto/0.51.1, python/2.7.11.
 * Downstream R Statistical Packages: R/4.5.2, DESeq2, edgeR, limma, tximport, sleuth, clusterProfiler, UpSetR, ggplot2.
-EOF
 
 
