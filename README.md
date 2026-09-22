@@ -4,6 +4,8 @@ An end-to-end bioinformatics and statistical framework evaluating the impact of 
 
 This repository evaluates how the choice of software pipelines influences biological conclusions when analyzing the same raw genetic data. It utilizes public data from a genetically engineered mouse model focusing on prostate cancer initiation driven by the Trp53 R270H mutation.
 
+See [Public Health Relevance](docs/public-health-relevance.md) for a discussion of how these findings relate to broader public health and translational research contexts.
+
 ## Project Importance
 
 When scientists study diseases like cancer using RNA sequencing, they rely on computational pipelines to convert raw biological data into a list of genes turned up or down by a disease. 

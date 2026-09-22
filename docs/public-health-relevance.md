@@ -1,0 +1,17 @@
+# Public Health Relevance
+
+## Why is reproducibility a public health concern?
+
+Beyond academic reproducibility, pipeline divergence in differentially expressed gene lists could influence the investigation of different therapeutic gene targets. For example, the statistical analysis of HISAT2-StringTie using DESeq2 and edgeR targeted genes from muscle pathways whereas limma-voom targeted p53 signalling pathways. Researchers running only DESeq2 or edgeR could end up prioritising stromal remodelling therapies, missing the signalling pathways highlighted by limma. Whilst I concluded both avenues to be biologically plausible for my mouse model, the data given to a therapeutic developer would depend entirely on the specific pipeline followed during upstream analysis. This means pipeline choice could steer the direction of downstream research and funding. Using a pipeline in isolation may produce a narrow or misleading view of the disease mechanism and have cost implications for wasted research effort. This is why consensus between pipelines is an important step before committing real resources to a therapeutic target. 
+
+## Why do these findings matter?
+
+p53 is one of the most extensively studied tumour suppressor genes in cancer research, and mutations affecting its function are implicated across a wide range of cancer types, not just prostate cancer. In this project, canonical p53 target genes (Cdkn1a and Sesn2) were consistently identified as differentially expressed across all three statistical pipelines tested (DESeq2, edgeR, and limma-voom), despite the pipelines otherwise diverging significantly on which pathways they highlighted. This consistency is notable: it suggests the p53 signal in this dataset is a genuine, robust biological finding rather than an artefact of any single analytical method.
+
+However, the pipeline that most clearly surfaced this signal at the pathway-enrichment level (limma-voom) was also the pipeline that returned the fewest total significant genes. This raises an important point for disease research more broadly. Biologically important signals don't always come from the largest or most statistically generous set of results. A p53-related signal that would drive a therapeutic hypothesis could easily be diluted or overlooked entirely if a researcher relied on a single pipeline that happened to return a much larger, broader gene list dominated by other pathways.
+
+## Scope
+
+This analysis is based on a single publicly available mouse dataset (Vinall et al., 2022; GSE130440), using a genetically engineered Trp53 R270H prostate cancer model with two biological replicates per genotype group. It is not a clinical study, and no findings here should be interpreted as evidence of therapeutic efficacy, diagnostic utility, or disease outcome in humans.
+
+The purpose of this project is methodological: to demonstrate how choice of RNA-seq analysis pipeline affects which genes and pathways are identified as significant, using this dataset as a case study. The biological findings discussed (p53-pathway genes, the uncharacterised lncRNA, and isoform switching in Hnrnpa1) are presented as illustrations of this reproducibility problem, not as validated disease mechanisms or biomarker candidates. Further experimental validation with larger replicate numbers, independent datasets, and wet-lab follow-up would be required before any of these findings could support a clinical or translational claim.
