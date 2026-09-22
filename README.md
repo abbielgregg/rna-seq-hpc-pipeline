@@ -14,16 +14,18 @@ An end-to-end bioinformatics and statistical framework evaluating the impact of 
 ```text
 rna-seq-hpc-pipeline/
 ├── data/
-│   └── Metadata.txt                 # Sample ID condition mapping configurations
+│   └── Metadata.txt
 ├── scripts/
-│   ├── 01_pipeline_quantification.sh # HISAT2 mapping & StringTie count aggregation
-│   ├── 02_kallisto_quant.sh          # Kallisto pseudoalignment with 100 bootstrap layers
-│   ├── 03_hisat2_deseq2.R            # DESeq2 computations on alignment metrics
-│   ├── 04_hisat2_edger.R             # edgeR calculations on alignment matrices
-│   ├── 05_hisat2_limma_voom.R        # Limma-voom evaluation across small cohorts
-│   ├── 06_kallisto_deseq2.R          # tximport gene-level cohesion + DESeq2 modeling
-│   └── 07_kallisto_sleuth.R          # Isoform-level variance tracking via Sleuth Wald tests
-└── README.md                        # Project documentation and architecture logs
+│   ├── 01_pipeline_quantification.sh
+│   ├── 02_kallisto_quant.sh
+│   ├── 03_hisat2_deseq2.R
+│   ├── 04_hisat2_edger.R
+│   ├── 05_hisat2_limma_voom.R
+│   ├── 06_kallisto_deseq2.R
+│   ├── 07_kallisto_sleuth.R
+│   ├── 08_pca_generation.R              # <-- NEW: Direct VST-PCA Mapping Plotter
+│   └── 09_pipeline_benchmarking_plots.R # <-- NEW: Scatter Concordance & Venn Plots
+└── README.md
 ```
 
 ## ️ Infrastructure & Dependencies
@@ -32,9 +34,4 @@ rna-seq-hpc-pipeline/
 *   **Downstream R Statistical Packages:** `DESeq2`, `edgeR`, `limma`, `tximport`, `sleuth`
 
 ---
-
-## Current Progress
-1.  **Upstream Processing [COMPLETED]:** Achieved ~78-81% mapping across read cohorts. Generated master genomic count matrices via `prepDE.py` and abundance tracking variables via `.h5` containers.
-2.  **Statistical Profiling [COMPLETED]:** Modeled 3-way physiological contrasts (HOM vs WT, HET vs WT, HOM vs HET) across all variations of negative-binomial, empirical Bayes, and linear weight distribution engines.
-3.  **Visualization & Annotation Synthesis [UPCOMING]:** Cross-mapping Ensembl stable IDs to functional gene symbols and generating comprehensive pipeline overlap analyses (UpSet plots, Volcano metrics, PCA spacing).
 
