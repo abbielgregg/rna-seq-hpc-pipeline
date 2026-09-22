@@ -1,3 +1,5 @@
+# Script for statistical method comparisons and sensitivity analysis
+
 library(UpSetR)
 library(ggplot2)
 library(tidyr)

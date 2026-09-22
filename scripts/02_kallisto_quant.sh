@@ -1,3 +1,5 @@
+# Alignment-free transcript abundance estimation using Kallisto
+
 #!/bin/bash
 # Script 02: Alignment-Free Transcript Pseudoalignment & Inference Estimation
 # Workflow: Kallisto Quant (100 Bootstrap Iterations for Uncertainty Resolution)

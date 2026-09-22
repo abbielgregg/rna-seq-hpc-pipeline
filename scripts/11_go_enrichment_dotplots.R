@@ -1,3 +1,5 @@
+# Script for functional pathway enrichment analysis using clusterProfiler
+
 library(clusterProfiler)
 library(org.Mm.eg.db)
 library(ggplot2)

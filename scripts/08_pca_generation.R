@@ -1,3 +1,5 @@
+# Script for sample quality control and PCA visualization
+
 # Script 08: Comparative Principal Component Analysis (PCA) Generation
 # Workflow: DESeq2 VST Normalisation -> ggplot2 Publication Visualisation
 # Comparison: Alignment-Based (HISAT2) vs Alignment-Free (Kallisto) Layouts

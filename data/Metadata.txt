@@ -1,3 +1,5 @@
+# Experimental sample metadata detailing WT, HET, and HOM mouse genotype groups
+
 sample	condition
 SRR8985047	WT
 SRR8985048	WT

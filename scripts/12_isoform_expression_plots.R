@@ -1,3 +1,5 @@
+# Script for high-resolution transcript isoform expression mapping
+
 library(ggplot2)
 
 # Build manual evaluation frame from your transcript results summary table

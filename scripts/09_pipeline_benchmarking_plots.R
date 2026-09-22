@@ -1,3 +1,5 @@
+# Script for pipeline correlation and DEG concordance analysis
+
 # Script 09: Cross-Pipeline Quantification Benchmarking & Intersections
 # Metrics: Pearson Correlation (Concordance Mapping) & Manual Geometric Venns
 # Comparison: HISAT2-StringTie vs Kallisto-tximport (HOM vs WT)

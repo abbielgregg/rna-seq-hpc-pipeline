@@ -76,3 +76,4 @@ rna-seq-hpc-pipeline/
 * Downstream R Statistical Packages: R/4.5.2, DESeq2, edgeR, limma, tximport, sleuth, clusterProfiler, UpSetR, ggplot2.
 EOF
 
+

@@ -1,3 +1,5 @@
+# Gene-level summarization and DESeq2 modeling of Kallisto counts
+
 # Script 06: Gene-Level Analysis via Kallisto + DESeq2
 # Statistical Framework: tximport Transcript Cohesion Transformation
 

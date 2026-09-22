@@ -1,5 +1,8 @@
+# Pipeline execution script for raw read alignment using HISAT2
+
 #!/bin/bash
-# Script 01: Preprocessing, Alignment, and Alignment-Based Expression Quantification
+# Primary scripts folder containing core quantification and downstream statistical analysis pipelines
+# Script 01: Preprocessing, Alignment and Alignment-Based Expression Quantification
 # Workflow: HISAT2 (Genome Mapping) -> Samtools (Sorting/Indexing) -> StringTie -> Python Matrix
 
 # Server Environment Setup (Executed via SSH on Imperial HPC)

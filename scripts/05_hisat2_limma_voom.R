@@ -1,3 +1,5 @@
+# Linear modeling framework for differential expression using limma-voom
+
 # Script 05: Differential Expression Analysis via Limma-Voom (HISAT2 Count Matrix)
 # Statistical Framework: Linear Modeling with Variance Weights Allocation
 

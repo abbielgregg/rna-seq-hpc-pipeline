@@ -1,3 +1,5 @@
+# Differential gene expression analysis framework using DESeq2
+
 # Script 03: Differential Expression Analysis via DESeq2 (HISAT2 Count Matrix)
 # Statistical Framework: Negative Binomial Generalized Linear Models
 

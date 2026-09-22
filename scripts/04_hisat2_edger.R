@@ -1,3 +1,5 @@
+# Differential gene expression analysis framework using edgeR
+
 # Script 04: Differential Expression Analysis via edgeR (HISAT2 Count Matrix)
 # Statistical Framework: Empirical Bayes Dispersion Partitioning models
 

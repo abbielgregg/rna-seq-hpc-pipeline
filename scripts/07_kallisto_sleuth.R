@@ -1,3 +1,5 @@
+# High-resolution transcript-level differential expression analysis using Sleuth
+
 # Script 07: Uncollapsed Transcript-Level Statistics via Sleuth
 # Statistical Framework: Response Models Accounting for Inferential Variance
 
