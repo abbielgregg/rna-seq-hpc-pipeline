@@ -35,6 +35,25 @@ Tested three industry-standard tools on the exact same quantified data to observ
 * High Global Correlation: Changing the underlying mapping strategy still preserved a strong global correlation of r = 0.767 across all 17,159 analyzed genes.
 * Overlapping Targets: The two quantification approaches shared a 58.2 percent overlap (428 genes) of core significant altered genes.
 
+
+<p align="center">
+  <img src="data/plots/scatter_pipeline_comparison_REPORT.png" width="500">
+</p>
+
+*Figure 1. Log2 fold-change correlation between HISAT2-StringTie and Kallisto-tximport quantification (r = 0.767, n = 17,159 genes), showing strong agreement between alignment-based and pseudoalignment-based approaches.*
+
+<p align="center">
+  <img src="data/plots/Venn_pipeline_comparison.png" width="450">
+</p>
+
+*Figure 2. Overlap of significantly differentially expressed genes called by each quantification pipeline (58.2% shared, 428 genes).*
+
+<p align="center">
+  <img src="data/plots/PCA_hisat2.png" width="400"> <img src="data/plots/PCA_kallisto.png" width="400">
+</p>
+
+*Figure 3. PCA of samples by genotype (WT, HET, HOM) under HISAT2-StringTie (left) and Kallisto (right) quantification.*
+
 ### Statistical Software Divergence
 The choice of statistical tool drastically scaled the volume of discoveries under identical cutoff criteria:
 * DESeq2 identified 734 genes (525 up, 209 down).
@@ -42,10 +61,48 @@ The choice of statistical tool drastically scaled the volume of discoveries unde
 * limma-voom was highly conservative, identifying only 8 genes (7 up, 1 down). 
 * Concordance: All 8 genes flagged by limma-voom were successfully captured by both DESeq2 and edgeR, proving they represent the absolute highest-confidence biological signals.
 
+
+<p align="center">
+  <img src="data/plots/Figure4B_DEG_Direction.png" width="500">
+</p>
+
+*Figure 4. Number of up- and down-regulated genes called by DESeq2, edgeR, and limma-voom under identical cutoff criteria.*
+
+<p align="center">
+  <img src="data/plots/Figure4A_UpSet_DE_Comparison.png" width="500">
+</p>
+
+*Figure 5. UpSet plot showing intersection of significant DEGs across the three DE tools, illustrating that all limma-voom hits are a subset of DESeq2 and edgeR calls.*
+
+<p align="center">
+  <img src="data/plots/Figure4C_FDR_Sensitivity.png" width="500">
+</p>
+
+*Figure 6. Sensitivity of DEG counts to FDR threshold across tools.*
+
 ### Biological Interpretations Shift
 * Microenvironment Alterations: DESeq2 and edgeR primarily highlighted structural changes in the tumor microenvironment, dominating their profiles with muscle system and tissue processes.
 * Direct Mutation Signals: Because limma-voom only captured a tiny pool of highly significant genes, it bypassed the structural muscle background and directly pinpointed p53-class mediation and cellular apoptosis pathways.
 * Isoform Insights: High-resolution transcript exploration successfully unmasked isoform switching behaviors in cancer-associated genes like Hnrnpa1 that were completely hidden during traditional gene-level evaluations.
+
+
+<p align="center">
+  <img src="data/plots/GO_BP_DESEQ2.png" width="400"> <img src="data/plots/GO_BP_EDGER.png" width="400">
+</p>
+
+*Figure 7. Top enriched GO Biological Process terms from DESeq2 (left) and edgeR (right) DEG lists, dominated by muscle system and tissue remodeling processes.*
+
+<p align="center">
+  <img src="data/plots/GO_BP_LIMMA.png" width="500">
+</p>
+
+*Figure 8. GO enrichment from the limma-voom high-confidence gene set, highlighting p53-mediated and apoptotic pathways rather than structural/muscle terms.*
+
+<p align="center">
+  <img src="data/plots/isoform_expression_example.png" width="500">
+</p>
+
+*Figure 9. Transcript-level isoform switching in Hnrnpa1, undetectable at the gene-level summary but resolved via transcript-level DESeq2 analysis.*
 
 ## Repository Structure
 
